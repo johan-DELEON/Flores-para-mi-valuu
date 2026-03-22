@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flores Amarillas para Valuu 🌻</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(#fff8d6,#ffeaa7);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+/* CONTENEDOR */
+
+.container{
+width:380px;
+height:560px;
+background:white;
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.2);
+position:relative;
+z-index:2;
+overflow:hidden;
+}
+
+/* SLIDES */
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+animation:fade .8s;
+}
+
+.slide.active{
+display:flex;
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(.95)}
+to{opacity:1;transform:scale(1)}
+}
+
+/* TEXTOS */
+
+h1{
+color:#6b8e23;
+font-size:40px;
+margin-bottom:10px;
+}
+
+p{
+color:#556b2f;
+font-size:18px;
+}
+
+/* IMAGENES */
+
+.slide img{
+width:85%;
+max-width:350px;
+height:auto;
+margin-top:10px;
+border-radius:15px;
+}
+
+/* AUDIO */
+
+audio{
+width:180px;
+margin-top:10px;
+}
+
+/* BOTONES */
+
+.botones{
+position:absolute;
+bottom:15px;
+width:100%;
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+button{
+background:#8fbf5a;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:25px;
+font-size:14px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#7aa94a;
+}
+
+/* CARTA */
+
+.hoja-carta{
+width:85%;
+height:85%;
+background:#fffef8;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+overflow:auto;
+text-align:justify;
+line-height:1.7;
+}
+
+/* FONDO */
+
+.fondo{
+position:fixed;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+.girasol{
+position:absolute;
+animation:caer linear infinite;
+}
+
+@keyframes caer{
+0%{transform:translateY(-100px) rotate(0deg)}
+100%{transform:translateY(110vh) rotate(360deg)}
+}
+
+/* CORAZONES */
+
+.corazon{
+position:absolute;
+color:#ff4d6d;
+font-size:20px;
+animation:flotar 6s linear infinite;
+}
+
+@keyframes flotar{
+0%{transform:translateY(100vh);opacity:1}
+100%{transform:translateY(-10vh);opacity:0}
+}
+
+/* CELULAR */
+
+@media (max-width:600px){
+
+body{
+height:auto;
+overflow:auto;
+padding:20px;
+}
+
+.container{
+width:95%;
+height:auto;
+min-height:650px;
+}
+
+.slide{
+padding:20px;
+}
+
+h1{
+font-size:30px;
+}
+
+p{
+font-size:16px;
+}
+
+.botones{
+position:relative;
+bottom:auto;
+margin-top:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="fondo" id="fondo"></div>
+
+<div class="container">
+
+<!-- SLIDE 1 -->
+
+<div class="slide active">
+
+<h1>Para mi Valuu</h1>
+
+<p>Un pequeño detalle hecho con cariño, solo para ti Valuu 💗🌻</p>
+
+<img src="img/perrito.jpg">
+
+<audio controls>
+<source src="music/musica_flores-amarillas.mp3" type="audio/mpeg">
+</audio>
+
+<div class="botones">
+<button onclick="nextSlide()">Siguiente ➜</button>
+</div>
+
+</div>
+
+<!-- SLIDE 2 -->
+
+<div class="slide">
+
+<p>
+Las flores de hoy fueron solo un pequeño detalle,<br>
+porque alguien tan especial como tú merece muchos más 🌻
+</p>
+
+<img src="img/perrito2.jpg">
+
+<div class="botones">
+<button onclick="prevSlide()">←</button>
+<button onclick="nextSlide()">→</button>
+</div>
+
+</div>
+
+<!-- SLIDE 3 -->
+
+<div class="slide">
+
+<p>
+Cada flor representa lo especial que eres para mí 💗
+</p>
+
+<img src="img/perrito3.jpg">
+
+<div class="botones">
+<button onclick="prevSlide()">←</button>
+<button onclick="nextSlide()">→</button>
+</div>
+
+</div>
+
+<!-- CARTA -->
+
+<div class="slide">
+
+<div class="hoja-carta">
+
+<p><strong>Querida Valuu,</strong></p>
+
+<p>
+Hoy quería dejarte este pequeño detalle, algo sencillo pero hecho con mucho cariño.
+Porque a veces las palabras se quedan cortas para decir lo que uno siente,
+pero aun así vale la pena intentarlo.
+</p>
+
+<p>
+Desde que llegaste a mi vida, muchos momentos simples se volvieron especiales:
+las risas, las conversaciones largas, los pequeños instantes que parecen
+no tener importancia, pero que terminan quedándose en el corazón.
+</p>
+
+<p>
+Hoy pude darte flores amarillas en persona, pero también quería que te quedara
+este pequeño rincón hecho solo para ti, para recordarte lo mucho que significas
+y lo feliz que me hace compartir momentos contigo.
+</p>
+
+<p>
+Ojalá todavía nos queden muchos recuerdos por crear,
+muchas risas por compartir y muchos momentos que con el tiempo
+se conviertan en historias bonitas.
+</p>
+
+<p>
+Porque al final, lo más valioso no son los lugares ni los días,
+sino la persona con quien decides vivirlos.
+</p>
+
+<p>
+Y contigo, cada momento siempre vale un poco más. 💛
+</p>
+
+<p><strong>Con cariño,</strong></p>
+
+<p><strong>Joji</strong></p>
+
+</div>
+
+<div class="botones">
+<button onclick="prevSlide()">←</button>
+<button onclick="goTo(0)">🏠 Inicio</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let current=0
+const slides=document.querySelectorAll(".slide")
+
+function showSlide(index){
+slides[current].classList.remove("active")
+current=index
+slides[current].classList.add("active")
+}
+
+function nextSlide(){
+let next=current+1
+if(next>=slides.length)next=0
+showSlide(next)
+}
+
+function prevSlide(){
+let prev=current-1
+if(prev<0)prev=slides.length-1
+showSlide(prev)
+}
+
+function goTo(i){
+showSlide(i)
+}
+
+/* FLORES */
+
+const fondo=document.getElementById("fondo")
+
+for(let i=0;i<35;i++){
+let flor=document.createElement("img")
+flor.src="https://www.pngmart.com/files/4/Sunflower-PNG-HD.png"
+flor.className="girasol"
+flor.style.left=Math.random()*100+"vw"
+flor.style.animationDuration=(5+Math.random()*5)+"s"
+flor.style.width=(25+Math.random()*35)+"px"
+fondo.appendChild(flor)
+}
+
+/* CORAZONES */
+
+for(let i=0;i<20;i++){
+let corazon=document.createElement("div")
+corazon.className="corazon"
+corazon.innerHTML="💗"
+corazon.style.left=Math.random()*100+"vw"
+corazon.style.animationDuration=(4+Math.random()*4)+"s"
+document.body.appendChild(corazon)
+}
+
+/* MENSAJE SORPRESA */
+
+setTimeout(()=>{
+alert("Valuu 💛 gracias por hacer mis días más bonitos 🌻")
+},4000)
+
+</script>
+
+</body>
+</html>
